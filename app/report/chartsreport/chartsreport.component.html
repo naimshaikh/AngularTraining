@@ -1,0 +1,88 @@
+<!-- content.component.html -->
+
+
+
+<section class="content">
+    <div class="container-fluid">
+        
+      <div class="jumbotron">
+        
+        
+      
+          <div>
+                  <div class="row">
+                      <div class="col-lg-12">
+                          <h2 class="page-header">Chart Reports</h2>
+                      </div>
+                      
+                  </div>
+                  
+                
+                  <div class="row">
+                     
+               <div class="col-lg-7">
+                          <div class="panel panel-default">
+                              <div class="panel-heading">
+                                 <i class="fa fa-bar-chart-o fa-fw"></i> Bar Chart Example
+                              </div>
+                              <div class="panel-body">
+                                <div class="flot-chart">
+                                   <canvas
+                                   baseChart
+                                   [chartType]="'bar'"
+                                   [datasets]="chartData"
+                                   [labels]="chartLabels"
+                                   [options]="chartOptions"
+                                   [legend]="true"
+                                   [colors]="colors"
+                                   (chartClick)="onChartClick($event)">
+                               </canvas>    
+                                </div>
+                            </div>
+                              <!-- <div class="panel-body">
+                                  <div class="flot-chart">
+                                      <div class="flot-chart-content" id="myChart"></div>
+                                  </div>
+                              </div> -->
+                              
+                          </div>
+                         
+                      </div>
+                     
+                      <div class="col-lg-5">
+                           <div class="panel panel-default">
+                              <div class="panel-heading">
+                                  <i class="fa fa-bar-chart-o fa-fw"></i> Pie Chart
+                              </div>
+                              <div class="panel-body">
+         
+                                <div class="flot-chart">
+                                    <canvas baseChart
+                [data]="pieChartData"
+                [labels]="pieChartLabels"
+                [chartType]="pieChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+                                 </div>
+                                 
+                             </div>
+                              <!-- <div class="panel-body">
+                  
+                                 <div class="flot-chart">
+                                      <!-- <div class="flot-chart-content" id="flot-pie-chart"></div> -->
+                                      <!-- <div id="donutchart" style = "width: 300px; height: 334px; margin: 0 auto"></div>
+                                  </div> -->
+                                  
+                              <!-- </div> --> 
+                              
+                          </div>
+                      </div>
+              
+                    
+          </div>	
+              </div>
+      </div>
+    </div>
+      
+  </section>
+  

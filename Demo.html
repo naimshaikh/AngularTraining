@@ -1,0 +1,183 @@
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<p id="demo">So Output</p>
+
+<p id="data"></p>
+
+<p id="demo1"></p>
+<p id="demo2"></p> 
+
+<p id="demo3"></p> 
+
+<p id="demo4"></p> 
+
+<p id="demo5"></p> 
+
+<p id="demo6"></p>
+
+<p id="demo7"></p>
+
+<p id="demo8"></p>
+
+<p id="demo9"></p>
+
+<p id="demo10"></p>
+
+<p id="demo11"></p>
+
+<p id="demo12"></p>
+
+<p id="demo13"></p>
+
+<p id="demo14"></p>
+
+
+<button type="button" onclick="myFunction()">Click Here</button>
+
+<script>
+
+    // Addition 
+    var a,b,c;
+    a=10;
+    b=10;
+    c=a+b;
+
+    //The assignment operator += can concatenate strings.
+
+    txt1 = "Hey Friends";
+    txt1 += "I am Fine";
+
+    // The * Operator
+
+    var x = 5;
+    var y = 5;
+    var z = x*y;
+
+    // Assignment Operator
+
+    var f = 10;
+    f -= 5;
+
+
+    //  Check the Booleans Value : true or false.
+
+    var p = 5;
+    var q = 5;
+    var r = 6;
+
+    // JavaScript Arrays
+
+    var fruit = ["Apple","Cherry","Strawberry"];
+
+    // JavaScript Objects
+
+    var person = {
+    firstName : "Naim",
+    lastName  : "Shaikh",
+    age       : 23,
+    eyeColor  : "Balck"
+};
+
+    // Accessing Object Methods
+
+    var person = {
+    firstName : "Naim",
+    lastName  : "Shaikh",
+    age       : 23,
+    eyeColor  : "Balck",
+    fullName : function() {
+       return this.firstName + " " + this.lastName;
+    }
+};
+
+    // Count String Length
+
+    var txt = "Naim Shaikh";
+
+    //  Concat() method joins two or more strings
+
+    var text1 = "Hello";
+    var text2 = "Naim!";
+    var text3 = text1.concat(" ",text2);
+
+    // JavaScript Switch Statement
+
+    var day;
+    switch (new Date().getDay()) {
+        case 0:
+            day = "Sunday";
+            break;
+        case 1:
+            day = "Monday";
+            break;
+        case 2:
+            day = "Tuesday";
+            break;
+         case 3:
+            day = "Wednesday";
+            break;
+        case 4:
+            day = "Thursday";
+            break;
+        case 5:
+            day = "Friday";
+            break;
+        case  6:
+            day = "Saturday";
+    }
+
+        // JavaScript Loops
+
+        var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+            var text = "";
+            var i;
+            for (i = 0; i < cars.length; i++) {
+                text += cars[i] + "<br>";
+            }
+                
+        
+
+function myFunction() {
+
+    document.getElementById("demo").innerHTML = "Hi Naim.";
+
+    document.getElementById("data").innerHTML =  "The value of c is " + c + "."; 
+
+     document.getElementById("demo1").innerHTML = "Hello Naim";
+
+    document.getElementById("demo2").innerHTML = "How are you?"; 
+
+    document.getElementById("demo3").innerHTML ="Naim" + " "  + "Shaikh";  
+
+    document.getElementById("demo4").innerHTML =txt1;  
+
+    document.getElementById("demo5").innerHTML = "The value of z is " + z + ".";  
+
+    document.getElementById("demo6").innerHTML = " Output "+f; 
+
+    document.getElementById("demo7").innerHTML = (p == q) + "<br>" + (p == r);
+
+    document.getElementById("demo8").innerHTML = fruit[1]; 
+
+    document.getElementById("demo9").innerHTML = person.firstName + " is " + person.age + " years old.";
+
+    document.getElementById("demo10").innerHTML = person.fullName();
+
+    document.getElementById("demo11").innerHTML = "Length of String is : " +txt.length;
+
+    document.getElementById("demo12").innerHTML = text3;
+
+    document.getElementById("demo13").innerHTML = day;
+
+    document.getElementById("demo14").innerHTML = cars;
+
+    
+
+}   
+</script>
+
+</body>
+</html> 

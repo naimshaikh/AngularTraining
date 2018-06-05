@@ -1,0 +1,48 @@
+body {
+    overflow-x:hidden ; 
+    overflow-y: scroll; 
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+.flex-container {
+    display: flex;
+    margin: auto;
+    width: 100%;                    
+}  
+.button {
+
+    font-size: 16px;
+    margin-top: 20px;
+}
+.lsignal {
+    margin-left: 35px;
+    padding-top: 50px;
+}
+.rsignal {
+
+        margin-left: 842px;
+        padding-top: 50px;
+}
+.main {
+    height:790px;
+    width: auto;    
+}
+.car1 {
+    margin-left: 700px;
+    padding-right: 100px;
+    padding-left: 70px;
+    background-color: rgb(77, 65, 65);
+    width: 20px;
+    height: 790px;
+    margin: auto;
+}
+.car2 {    
+    margin: auto;
+    height:180px;
+    margin-top:-500px;
+    width:auto;
+    background-color: rgb(77, 65, 65);
+}

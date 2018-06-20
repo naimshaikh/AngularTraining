@@ -29,7 +29,7 @@
         <input type="password" style="width:250px" class="form-control" id="password" placeholder="Enter Password" formControlName="password">
         <div *ngIf="registerform.controls.password.touched && registerform.controls.password.hasError('required')" class="alert alert-danger">Password is Required!</div>
         <div *ngIf="registerform.controls.password.touched && registerform.controls.password.hasError('pattern')" class="alert alert-danger">
-          Your password must be at least 6 to 12 characters long, contain at least one uppercase, lowercase, number and special charecter.
+          Password Week!
         </div>
 
       </div>

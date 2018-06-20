@@ -25,9 +25,7 @@
         <label for="password">Password:</label>
         <input type="password" style="width:250px" class="form-control" id="password" placeholder="Enter Password" formControlName="password">
         <div *ngIf="loginform.controls.password.touched && loginform.controls.password.hasError('required')" class="alert alert-danger">Password is Required!</div>
-        <div *ngIf="loginform.controls.password.touched && loginform.controls.password.hasError('pattern')" class="alert alert-danger">
-          Your password must be at least 6 to 12 characters long, contain at least one uppercase, lowercase, number and special charecter.
-        </div>
+        
       </div>
       <button type="submit"  [disabled]="loginform.invalid" type="submit" class="btn btn-default">Submit</button>
     </form>

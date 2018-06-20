@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <form [formGroup]="loginform" (ngSubmit)="login(loginform.value)">
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" style="width:250px" class="form-control" id="email" placeholder="Enter email" formControlName="email">
+        <div *ngIf="loginform.controls.email.touched && loginform.controls.email.hasError('required')" class="alert alert-danger">Email is Required!</div>
+        <div *ngIf="loginform.controls.email.touched && loginform.controls.email.hasError('email')" class="alert alert-danger">Invalid Email!</div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" style="width:250px" class="form-control" id="password" placeholder="Enter Password" formControlName="password">
+        <div *ngIf="loginform.controls.password.touched && loginform.controls.password.hasError('required')" class="alert alert-danger">Password is Required!</div>
+        <div *ngIf="loginform.controls.password.touched && loginform.controls.password.hasError('pattern')" class="alert alert-danger">
+          Your password must be at least 6 to 12 characters long, contain at least one uppercase, lowercase, number and special charecter.
+        </div>
+      </div>
+      <button type="submit"  [disabled]="loginform.invalid" type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+</body>
+
+</html>
